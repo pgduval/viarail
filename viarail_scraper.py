@@ -8,6 +8,8 @@ import random
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+OUTPUT_FILE = "/home/elmaster/scraper/viarail/price.csv"
+
 
 def get_random_int(min, max):
     return random.random() * (max - min + 1) + min
@@ -16,13 +18,13 @@ def get_random_int(min, max):
 def make_output_file():
     header = ["scrape_date", "date", "time_departure", "time_arrival", "duration",
               "escape", "economy", "economy_plus", "business", "business_plus"]
-    with open("/home/elmaster/scraper/viarail/price.csv", "a") as f:
+    with open(OUTPUT_FILE, "a") as f:
         writer = csv.writer(f)
         writer.writerow(header)
 
 
-def write_results(data):
-    with open("/home/elmaster/scraper/viarail/price.csv", "a") as f:
+def write_list_to_csv(data):
+    with open(OUTPUT_FILE, "a") as f:
         writer = csv.writer(f)
         writer.writerows(data)
 
@@ -120,19 +122,23 @@ driver.find_element_by_id("search-button").click()
 
 # print(driver.window_handles)
 driver.switch_to.window(window_name=driver.window_handles[-1])
-time.sleep(1)
+time.sleep(get_random_int(0.5, 3))
 
 # Scrape current page
 parsed_data = extract_data(driver.page_source)
-write_results(parsed_data)
+write_list_to_csv(parsed_data)
 
-# Click on next date
-for click in range(5):
-
+# Click on next date and get price for month ahead
+for i in range(30):
+    print("\n Click number: {}".format(i))
+    time.sleep(get_random_int(0.5, 3))
     # Next date
     driver.find_element_by_xpath("//*[@id='calendar-tab-calendar']/ul/li[3]").click()
 
     parsed_data = extract_data(driver.page_source)
-    write_results(parsed_data)
+    write_list_to_csv(parsed_data)
+
+driver.quit()
+print("Done!")
 
 # End
