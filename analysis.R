@@ -3,8 +3,6 @@ library(dplyr)
 library(grid)
 library(gridExtra)
 
-install.packages(c("grid", "gridExtra"))
-
 setwd('/home/elmaster/scraper/viarail')
 data = read.csv('./price.csv', stringsAsFactor=FALSE)
 
@@ -34,7 +32,7 @@ data3 = data2 %>%
 head(data3)
 
 add_credits = function() {
-  grid.text("ddata.com",
+  grid.text("DGdata.com",
             x = 0.99,
             y = 0.02,
             just = "right",
@@ -62,8 +60,10 @@ all_dates = seq.Date(from=min(data2$date), to=(max(data2$date)), by='day')
 all_weekdays = weekdays(all_dates, abbr = TRUE)
 weekends = all_dates[grepl("S(at|un)", all_weekdays)]
 
+# Export settings
 w = 640
 h = 420
+
 graph_price = function(price){
     # png(filename = "./graph.png", height = h, width = w)
     ggplot(data=data2, aes_string(x='date', y=price, col='scrape_date')) +
@@ -77,8 +77,6 @@ graph_price = function(price){
         # add_credits()   
     # dev.off() 
 }
-
-
 
 graph_price_summary = function(price){
     
@@ -97,10 +95,10 @@ graph_price(price='economy_plus')
 graph_price(price='business')
 graph_price(price='business_plus')
 
-graph_price_summary(price='escape')
-graph_price_summary(price='economy')
-graph_price_summary(price='economy_plus')
-graph_price_summary(price='business')
-graph_price_summary(price='business_plus')
+# graph_price_summary(price='escape')
+# graph_price_summary(price='economy')
+# graph_price_summary(price='economy_plus')
+# graph_price_summary(price='business')
+# graph_price_summary(price='business_plus')
 
 # end

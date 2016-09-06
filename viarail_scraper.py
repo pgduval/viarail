@@ -45,7 +45,7 @@ def clean_duration(val):
 
 def extract_data(source):
 
-    soup = bs4.BeautifulSoup(source)
+    soup = bs4.BeautifulSoup(source, 'lxml')
 
     # Get current date
     date_raw = soup.find('li', class_='selected-calendar').get_text().strip()
@@ -88,7 +88,7 @@ def extract_data(source):
 # Setting
 scrape_date = datetime.datetime.now().strftime("%Y-%m-%d")
 current_year = datetime.datetime.now().strftime("%Y")
-current_day = datetime.datetime.now().strftime("%d")
+current_day = str(int(datetime.datetime.now().strftime("%d")))
 
 driver = webdriver.Chrome('/home/elmaster/chromedriver')  # Optional argument, if not specified will search path.
 
@@ -122,7 +122,7 @@ driver.find_element_by_id("search-button").click()
 
 # print(driver.window_handles)
 driver.switch_to.window(window_name=driver.window_handles[-1])
-time.sleep(get_random_int(0.5, 3))
+time.sleep(get_random_int(2, 3))
 
 # Scrape current page
 parsed_data = extract_data(driver.page_source)
