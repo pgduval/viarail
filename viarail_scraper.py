@@ -119,10 +119,11 @@ time.sleep(get_random_int(0.5, 3))
 driver.find_element_by_link_text(str(current_day)).click()
 time.sleep(get_random_int(0.5, 3))
 driver.find_element_by_id("search-button").click()
+time.sleep(get_random_int(5, 6))
 
 # print(driver.window_handles)
 driver.switch_to.window(window_name=driver.window_handles[-1])
-time.sleep(get_random_int(2, 3))
+time.sleep(get_random_int(0.5, 0.6))
 
 # Scrape current page
 parsed_data = extract_data(driver.page_source)

@@ -32,7 +32,7 @@ data3 = data2 %>%
 head(data3)
 
 add_credits = function() {
-  grid.text("DGdata.com",
+  grid.text("DataDG.com",
             x = 0.99,
             y = 0.02,
             just = "right",
