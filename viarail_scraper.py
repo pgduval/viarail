@@ -104,8 +104,7 @@ user_agent = (
 dcap = dict(DesiredCapabilities.PHANTOMJS)
 dcap["phantomjs.page.settings.userAgent"] = user_agent
 
-browser = webdriver.PhantomJS(desired_capabilities=dcap)
-driver = webdriver.PhantomJS()  # Optional argument, if not specified will search path.
+driver = webdriver.PhantomJS(desired_capabilities=dcap)  # Optional argument, if not specified will search path.
 driver.manage().window().setSize(1000, 800)
 
 driver.get("http://www.viarail.ca/en")
