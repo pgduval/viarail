@@ -7,6 +7,7 @@ import random
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 OUTPUT_FILE = "/home/elmaster/scraper/viarail/price.csv"
 
@@ -90,7 +91,22 @@ scrape_date = datetime.datetime.now().strftime("%Y-%m-%d")
 current_year = datetime.datetime.now().strftime("%Y")
 current_day = str(int(datetime.datetime.now().strftime("%d")))
 
-driver = webdriver.Chrome('/home/elmaster/chromedriver')  # Optional argument, if not specified will search path.
+# options = webdriver.ChromeOptions()
+# options.add_argument('--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36')
+
+# driver = webdriver.Chrome('/home/elmaster/chromedriver')  # Optional argument, if not specified will search path.
+# driver = webdriver.Chrome('/home/elmaster/chromedriver', chrome_options=options)  # Optional argument, if not specified will search path.
+
+user_agent = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"
+)
+
+dcap = dict(DesiredCapabilities.PHANTOMJS)
+dcap["phantomjs.page.settings.userAgent"] = user_agent
+
+browser = webdriver.PhantomJS(desired_capabilities=dcap)
+driver = webdriver.PhantomJS()  # Optional argument, if not specified will search path.
+driver.manage().window().setSize(1000, 800)
 
 driver.get("http://www.viarail.ca/en")
 time.sleep(10)
