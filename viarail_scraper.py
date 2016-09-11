@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import time
 import datetime
@@ -12,7 +12,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 OUTPUT_FILE = "/home/ubuntu/scraper/viarail/price.csv"
-
+N_DAYS = 30
 
 def get_random_int(min, max):
     return random.random() * (max - min + 1) + min
@@ -147,7 +147,7 @@ parsed_data = extract_data(driver.page_source)
 write_list_to_csv(parsed_data)
 
 # Click on next date and get price for month ahead
-for i in range(30):
+for i in range(N_DAYS):
     print("\n Click number: {}".format(i))
     time.sleep(get_random_int(0.5, 3))
     # Next date

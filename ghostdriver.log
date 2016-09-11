@@ -1,12 +1,12 @@
-[INFO  - 2016-09-11T02:14:19.281Z] GhostDriver - Main - running on port 41870
-[INFO  - 2016-09-11T02:14:20.217Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36","webSecurityEnabled":true}
-[INFO  - 2016-09-11T02:14:20.217Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.customHeaders:  - {}
-[INFO  - 2016-09-11T02:14:20.217Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"}
-[INFO  - 2016-09-11T02:14:20.217Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 72f26650-77c5-11e6-a731-db1e96eba502
-[ERROR - 2016-09-11T02:14:21.192Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.onError - msg: TypeError: undefined is not an object (evaluating 'jQuery.onFontResize.initialSize = $resizeframe[0].offsetWidth / 100')
+[INFO  - 2016-09-11T16:07:51.644Z] GhostDriver - Main - running on port 40862
+[INFO  - 2016-09-11T16:07:52.576Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2016-09-11T16:07:52.576Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.customHeaders:  - {}
+[INFO  - 2016-09-11T16:07:52.576Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36"}
+[INFO  - 2016-09-11T16:07:52.576Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: e4a2c3c0-7839-11e6-9537-5fa19cc5575c
+[ERROR - 2016-09-11T16:07:53.851Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.onError - msg: TypeError: undefined is not an object (evaluating 'jQuery.onFontResize.initialSize = $resizeframe[0].offsetWidth / 100')
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2016-09-11T02:14:21.193Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.onError - stack:
+[ERROR - 2016-09-11T16:07:53.851Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.onError - stack:
   (anonymous function) (http://www.viarail.ca/sites/all/themes/custom/viarail/js/jquery.onfontresize.js:41)
   (anonymous function) (:1)
   (anonymous function) (:1)
@@ -14,13 +14,13 @@
   ready (:1)
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2016-09-11T02:14:21.193Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.onError - msg: [object Object]
+[ERROR - 2016-09-11T16:07:53.852Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.onError - msg: [object Object]
 
   phantomjs://platform/console++.js:263 in error
-[ERROR - 2016-09-11T02:14:21.193Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.onError - stack:
+[ERROR - 2016-09-11T16:07:53.852Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.onError - stack:
   error (http://www.googletagmanager.com/gtm.js?id=GTM-N2RNNX:69)
   onerror (http://www.googletagmanager.com/gtm.js?id=GTM-N2RNNX:77)
 
   phantomjs://platform/console++.js:263 in error
-[INFO  - 2016-09-11T02:14:57.762Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36","webSecurityEnabled":true}
-[INFO  - 2016-09-11T02:14:57.763Z] Session [72f26650-77c5-11e6-a731-db1e96eba502] - page.customHeaders:  - {}
+[INFO  - 2016-09-11T16:08:31.112Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36","webSecurityEnabled":true}
+[INFO  - 2016-09-11T16:08:31.112Z] Session [e4a2c3c0-7839-11e6-9537-5fa19cc5575c] - page.customHeaders:  - {}
