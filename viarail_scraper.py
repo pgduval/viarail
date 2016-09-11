@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import time
 import datetime
 import re
@@ -9,7 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-OUTPUT_FILE = "/home/elmaster/scraper/viarail/price.csv"
+OUTPUT_FILE = "/home/ubuntu/scraper/viarail/price.csv"
 
 
 def get_random_int(min, max):
@@ -105,7 +107,7 @@ dcap = dict(DesiredCapabilities.PHANTOMJS)
 dcap["phantomjs.page.settings.userAgent"] = user_agent
 
 driver = webdriver.PhantomJS(desired_capabilities=dcap)  # Optional argument, if not specified will search path.
-driver.manage().window().setSize(1000, 800)
+driver.set_window_size(1000, 800)
 
 driver.get("http://www.viarail.ca/en")
 time.sleep(10)
